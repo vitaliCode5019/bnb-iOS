@@ -40,11 +40,3 @@ import UIKit
         }
     }
 }
-
-protocol PageViewControllerWithControlDelegate: class {
-    func pageViewController(pageViewController: UIPageViewController,
-                                     didUpdatePageCount count: Int)
-    
-    func pageViewController(pageViewController: UIPageViewController,
-                                     didUpdatePageIndex index: Int)
-}
