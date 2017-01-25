@@ -158,7 +158,8 @@ extension MapViewController {
     }
     
     func onCameraTo(place: GMSPlace) {
-        let updatedCamera = GMSCameraUpdate.setTarget(place.coordinate, zoom: 12)
-        mapView?.animate(with: updatedCamera)
+        print("search completed, move camera to \(place)")
+        let cameraPostion = GMSCameraPosition.camera(withTarget: place.coordinate, zoom: 12)
+        mapView?.animate(to: cameraPostion)
     }
 }
